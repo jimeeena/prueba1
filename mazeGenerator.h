@@ -5,8 +5,7 @@
 #include <stack>
 #include <queue>
 #include <vector>
-
-#define USE_DFS  // Cambia a #define USE_BFS para usar BFS
+#include "constants.h"
 
 class MazeGenerator {
 public:
@@ -23,6 +22,7 @@ private:
     void generateMazeBFS();
     void removeWalls(Cell* current, Cell* next);
     Cell* getNeighbor(Cell* cell, int direction) const;
+    void removeRandomEdge();
 
     int rows;
     int cols;
